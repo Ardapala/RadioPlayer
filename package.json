@@ -1,0 +1,33 @@
+{
+  "name": "radioplayer",
+  "version": "1.0.0",
+  "description": "Modern Windows Radio Player",
+  "main": "electron.js",
+  "author": "Ardapala",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build": "electron-builder"
+  },
+  "dependencies": {
+    "electron-store": "^10.1.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "electron": "^37.2.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.ardapala.radioplayer",
+    "productName": "Radio Player",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/logo.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

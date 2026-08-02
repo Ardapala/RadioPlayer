@@ -9,10 +9,11 @@
   },
   {
     "id": 2,
-    "name": "ATV",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/7/74/Atv_logo_2013.png",
+   "name": "Atv",
+    "logo": "https://imgs.mfsite.cc/atvfhd.png",
     "group": "Ulusal",
     "country": "TR",
-    "stream": "http://89.187.191.41/ATV-HD-TR/video.m3u8?checkedby:iptvcat.net"
+    "stream": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8"
+    
   }
 ]

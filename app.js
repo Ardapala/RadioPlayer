@@ -6,11 +6,11 @@ const channelsBox = document.getElementById("channels");
 const searchInput = document.getElementById("search");
 const player = document.getElementById("player");
 
-
 let channels = [];
+let hls;
 
 
-// GitHub'dan kanalları çek
+// Kanalları yükle
 async function loadChannels(){
 
     try {
@@ -29,13 +29,13 @@ async function loadChannels(){
 
         channelsBox.innerHTML =
         "<h3>Kanal listesi yüklenemedi</h3>";
+
     }
 
 }
 
 
-
-// Kanalları ekrana bas
+// Kanal kartlarını oluştur
 function showChannels(list){
 
     channelsBox.innerHTML = "";
@@ -56,7 +56,7 @@ function showChannels(list){
 
             <h3>${channel.name}</h3>
 
-            <small>${channel.group}</small>
+            <small>${channel.group || ""}</small>
 
         `;
 
@@ -76,24 +76,57 @@ function showChannels(list){
 }
 
 
-
-// Kanal oynat
+// HLS oynatıcı
 function playChannel(channel){
+
 
     console.log("Açılıyor:", channel.name);
 
 
-    player.src = channel.stream;
+    if(hls){
+
+        hls.destroy();
+
+    }
+
+
+    if(Hls.isSupported()){
+
+
+        hls = new Hls();
+
+
+ hls.loadSource(
+    "https://bug-free-spork-56699wwpjvp34q5w-3000.app.github.dev/stream?url=" +
+    encodeURIComponent(channel.stream)
+);
+
+
+hls.attachMedia(player);
+
+
+hls.on(Hls.Events.MANIFEST_PARSED, ()=>{
 
     player.play();
 
+});
+
+
+    } 
+    else if(player.canPlayType("application/vnd.apple.mpegurl")){
+
+
+        player.src = channel.stream;
+
+        player.play();
+
+    }
 
 }
 
 
-
 // Arama
-searchInput.addEventListener("input",()=>{
+searchInput.addEventListener("input", ()=>{
 
 
     const text = searchInput.value.toLowerCase();
@@ -101,9 +134,7 @@ searchInput.addEventListener("input",()=>{
 
     const filtered = channels.filter(channel =>
 
-        channel.name
-        .toLowerCase()
-        .includes(text)
+        channel.name.toLowerCase().includes(text)
 
     );
 
@@ -114,5 +145,5 @@ searchInput.addEventListener("input",()=>{
 });
 
 
-
+// Başlat
 loadChannels();

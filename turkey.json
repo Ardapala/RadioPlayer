@@ -1,19 +1,38 @@
 [
   {
-    "id": 1,
-    "name": "TRT 1",
-    "logo": "http://185.234.111.229:8000/play/a00c?checkedby:iptvcat.net",
-    "group": "Ulusal",
-    "country": "TR",
-    "stream": "https://example.com/trt1.m3u8"
+    "name": "Show TV",
+    "logo": "https://imgs.mfsite.cc/showfhd.png",
+    "group": "ULUSAL",
+    "stream": "https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showtv/showtv.m3u8"
   },
   {
-    "id": 2,
-   "name": "Atv",
+    "name": "Star TV",
+    "logo": "https://imgs.mfsite.cc/starfhd.png",
+    "group": "ULUSAL",
+    "stream": "http://dygvideo.dygdigital.com/live/hls/startv4puhu?m3u8"
+  },
+  {
+    "name": "ATV",
     "logo": "https://imgs.mfsite.cc/atvfhd.png",
-    "group": "Ulusal",
-    "country": "TR",
+    "group": "ULUSAL",
+    "stream": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv.m3u8"
+  },
+  {
+    "name": "Kanal D",
+    "logo": "https://imgs.mfsite.cc/kanaldfhd.png",
+    "group": "ULUSAL",
     "stream": "https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=da2109ea-5dfe-4107-89ab-23593336ed61"
-    
+  },
+  {
+    "name": "NOW TV",
+    "logo": "https://imgs.mfsite.cc/now.png",
+    "group": "ULUSAL",
+    "stream": "https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8"
+  },
+  {
+    "name": "Beyaz TV HD",
+    "logo": "https://imgs.mfsite.cc/beyaztvhd.png",
+    "group": "ULUSAL",
+    "stream": "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8"
   }
 ]

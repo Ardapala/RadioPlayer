@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "TRT 1",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/86/TRT_1_logo.svg",
+    "logo": "http://185.234.111.229:8000/play/a00c?checkedby:iptvcat.net",
     "group": "Ulusal",
     "country": "TR",
     "stream": "https://example.com/trt1.m3u8"
@@ -13,6 +13,6 @@
     "logo": "https://upload.wikimedia.org/wikipedia/commons/7/74/Atv_logo_2013.png",
     "group": "Ulusal",
     "country": "TR",
-    "stream": "https://example.com/atv.m3u8"
+    "stream": "http://89.187.191.41/ATV-HD-TR/video.m3u8?checkedby:iptvcat.net"
   }
 ]
